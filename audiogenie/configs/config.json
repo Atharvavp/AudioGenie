@@ -1,0 +1,41 @@
+{
+  "input_audio": {
+    "mode": "directory",
+    "paths": ["/local/Gnanvani_1_raw"]
+  },
+  "conversion": {
+    "enabled": true,
+    "save_converted": true,
+    "output_directory": "preprocessed",
+    "output_format": "wav",
+    "codec": "pcm_s32le",
+    "settings": {
+      "enable": false,
+      "sample_rate": 44100,
+      "channels": 2
+    }
+  },
+  "inference": {
+    "enabled": true,
+    "save_output": true,
+    "output_directory": "inferenced",
+    "clearvoice_model_path": "models/clearvoice.onnx",
+    "sample_rate": 16000
+  },
+  "postprocessing": {
+    "enabled": true,
+    "save_output": true,
+    "output_directory": "postprocessed",
+    "codec": "pcm_s32le",
+    "fire_eq": {
+      "frequency": 6000,
+      "gain": -90
+    }
+  },
+  "noise_output": {
+    "enabled": true,
+    "intermediate_directory": "temp",
+    "output_directory": "noise_only",
+    "keep_intermediates": false
+  }
+}

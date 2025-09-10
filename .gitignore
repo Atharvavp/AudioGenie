@@ -174,3 +174,4 @@ cython_debug/
 *.mp3
 checkpoints
 *.crt
+*.gz

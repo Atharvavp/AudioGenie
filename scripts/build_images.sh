@@ -1,0 +1,1 @@
+docker build -t ambatechai/noise_cancellation:v0_runtime .

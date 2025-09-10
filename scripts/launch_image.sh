@@ -1,3 +1,2 @@
-docker container rm -f audiogenie_local && \
-docker run -itd -v ./:/local --gpus all --name audiogenie_local audiogenie:dev && \
-docker exec -it audiogenie_local bash
+docker container rm -f audiogenie_minimal && \
+docker run -itd -p 7860:7860 --name audiogenie_minimal -v ./temp:/temp --gpus all ambatechai/noise_cancellation:v0_runtime
